@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by or on 22/05/17.
  */
-public class SortedGroup<T extends Comparable<T>>
+public class SortedGroup<T extends Comparable<T>> implements Iterable<T>
 {
     private ArrayList<T> _elements;
 
@@ -21,7 +22,7 @@ public class SortedGroup<T extends Comparable<T>>
         }
 
         int insertInd = 0;
-        while (element.compareTo(_elements.get(insertInd)) < 0)
+        while (element.compareTo(_elements.get(insertInd)) > 0)
         {
             insertInd++;
         }
@@ -29,4 +30,20 @@ public class SortedGroup<T extends Comparable<T>>
         _elements.add(insertInd, element);
     }
 
+    int Remove(T element)
+    {
+        int removed = 0;
+        while (_elements.remove(element))
+        {
+            removed++;
+        }
+
+        return removed;
+    }
+
+    @Override
+    public Iterator<T> iterator()
+    {
+        return _elements.iterator();
+    }
 }
