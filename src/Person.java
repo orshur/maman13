@@ -1,7 +1,7 @@
 /**
  * Created by or on 24/05/17.
  */
-public class Person implements Comparable
+public class Person implements Comparable<Person>
 {
     private String _name;
     private String _id;
@@ -21,15 +21,11 @@ public class Person implements Comparable
     }
 
     @Override
-    public int compareTo(Object o)
+    public int compareTo(Person o)
     {
         if (o == null)
         {
             throw new NullPointerException();
-        }
-        if (!(o instanceof Person))
-        {
-            throw new ClassCastException();
         }
 
         Person other = (Person)o;

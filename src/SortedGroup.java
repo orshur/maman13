@@ -25,6 +25,10 @@ public class SortedGroup<T extends Comparable<T>> implements Iterable<T>
         while (element.compareTo(_elements.get(insertInd)) > 0)
         {
             insertInd++;
+            if (insertInd == _elements.size()) //reached list end
+            {
+                break;
+            }
         }
 
         _elements.add(insertInd, element);
