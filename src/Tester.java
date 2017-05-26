@@ -1,6 +1,6 @@
 
 /**
- * Created by or on 24/05/17.
+ * Driver to test SortedGroup
  */
 public class Tester
 {

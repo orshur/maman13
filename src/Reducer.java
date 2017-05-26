@@ -1,10 +1,12 @@
-import java.util.Iterator;
-
 /**
- * Created by or on 24/05/17.
+ * utility class, reduces an input sorted group
  */
 public class Reducer
 {
+
+    /**
+     * return a new SortedGroup containing elements < x
+     */
     public static<T extends Comparable<T>> SortedGroup<T> reduce(SortedGroup<T> sGroup, T x)
     {
         SortedGroup<T> reducedGroup = new SortedGroup<>();

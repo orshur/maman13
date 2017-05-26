@@ -1,5 +1,5 @@
 /**
- * Created by or on 24/05/17.
+ * represents a person, persons are comparable by year of birth
  */
 public class Person implements Comparable<Person>
 {
